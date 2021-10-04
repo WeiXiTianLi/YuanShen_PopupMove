@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="YuanShen_PopupMove">
-    </qresource>
+  <qresource prefix="/YuanShen_PopupMove">
+    <file>resource/icon.ico</file>
+  </qresource>
 </RCC>

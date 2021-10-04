@@ -1,28 +1,141 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>YuanShen_PopupMoveClass</class>
- <widget class="QMainWindow" name="YuanShen_PopupMoveClass" >
-  <property name="objectName" >
-   <string notr="true">YuanShen_PopupMoveClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="YuanShen_PopupMoveClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>160</width>
+    <height>80</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>YuanShen_PopupMove</string>
-  </property>  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  </property>
+  <property name="windowIcon">
+   <iconset resource="YuanShen_PopupMove.qrc">
+    <normaloff>:/YuanShen_PopupMove/resource/icon.ico</normaloff>:/YuanShen_PopupMove/resource/icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pB_StartMove">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+background-color:rgb(57, 59, 64);
+color:rgb(244, 216, 168);
+border:none;
+border-radius:4px;
+}
+QPushButton:hover {
+background-color:rgb(77, 79, 83);
+}
+QPushButton:pressed {
+background-color:rgb(57, 59, 64);
+}</string>
+          </property>
+          <property name="text">
+           <string>开始移动窗口</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>微软雅黑</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+border:none;
+padding: 0 20px;
+background: rgba(246, 245, 243,128);
+border-radius: 0px;
+font: 11pt &quot;微软雅黑&quot;;
+color:rgba(244, 216, 168,255);
+</string>
+          </property>
+          <property name="text">
+           <string>按住拖动
+右键退出</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="YuanShen_PopupMove.qrc"/>
+  <include location="YuanShen_PopupMove.qrc"/>
  </resources>
  <connections/>
-</UI>
+</ui>

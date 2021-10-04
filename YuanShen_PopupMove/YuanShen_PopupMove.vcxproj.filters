@@ -35,14 +35,31 @@
     <ClCompile Include="YuanShen_PopupMove.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ResourceCompile Include="$pro_name$.rc">
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YuanShen_Fun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="YuanShen_Fun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="YuanShen_PopupMove.rc">
+      <Filter>Resource Files</Filter>
     </ResourceCompile>
-    <None Include="$pro_name$.ico">
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\mainicon.ico">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="$pro_name$.def">
-      <Filter>Resource Files</Filter>
-    </None>
-
+    </Image>
   </ItemGroup>
 </Project>
