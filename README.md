@@ -4,3 +4,5 @@
 左键移动，右键退出
 
 如图使用
+
+![](https://github.com/WeiXiTainLi/YuanShen_PopupMove/blob/master/Doc/show.gif)
