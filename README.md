@@ -5,4 +5,5 @@
 
 如图使用
 
-![](https://github.com/WeiXiTainLi/YuanShen_PopupMove/blob/master/Doc/show.gif)
+![github](https://github.com/WeiXiTainLi/YuanShen_PopupMove/blob/master/Doc/show.gif)
+![gitee](https://gitee.com/Yu_Sui_Xian/YuanShen_PopupMove/blob/master/Doc/show.gif)
