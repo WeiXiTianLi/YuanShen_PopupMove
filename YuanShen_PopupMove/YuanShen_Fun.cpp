@@ -2,40 +2,41 @@
 
 #include <Windows.h>
 
-//»ñÈ¡»ò¸üĞÂÔ­Éñ´°¿Ú¾ä±ú
+// è·å–æˆ–æ›´æ–°åŸç¥çª—å£å¥æŸ„
 HWND getYuanShenHandle()
 {
 	static HWND giHandle = nullptr;
 	if (!IsWindow(giHandle))
 	{
-		LPCWSTR giWindowName = { L"Ô­Éñ" };
-		giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* Æ¥ÅäÃû³Æ£ºÔ­Éñ */
+		LPCWSTR giWindowName = {L"åŸç¥"};
+		giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* åŒ¹é…åç§°ï¼šåŸç¥ */
 		if (giHandle == NULL)
 		{
 			giWindowName = L"Genshin Impact";
-			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* Æ¥ÅäÃû³Æ£ºGenshin Impact */
+			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* åŒ¹é…åç§°ï¼šGenshin Impact */
 		}
 		if (giHandle == NULL)
 		{
 			giWindowName = L"\u539F\u795E";
-			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* Æ¥ÅäÃû³Æ£ºÔ­Éñ */
+			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* åŒ¹é…åç§°ï¼šåŸç¥ */
 		}
 		if (giHandle == NULL)
 		{
 			giWindowName = L"\uC6D0\uC2E0";
-			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* Æ¥ÅäÃû³Æ£º?? */
+			giHandle = FindWindowW(L"UnityWndClass", giWindowName); /* åŒ¹é…åç§°ï¼š?? */
 		}
 	}
 #ifdef _DEBUG
-	//cout << "giHandle: " << giHandle << endl;
+	// cout << "giHandle: " << giHandle << endl;
 #endif
 	return giHandle;
 }
 
 bool getYuanShenRect(HWND giHandle, RECT &giRect)
 {
-	if (!IsWindow(giHandle))return false;
-	//GetClientRect(giHandle, &giRect);
+	if (!IsWindow(giHandle))
+		return false;
+	// GetClientRect(giHandle, &giRect);
 	GetWindowRect(giHandle, &giRect);
 	return true;
 }
@@ -45,15 +46,13 @@ void setThisTop(HWND thisHandle)
 	static HWND HW_TopMods = HWND_TOP;
 	static bool isShow = true;
 	static bool isTopMost = true;
-	//HWND HW_Now = HWND_TOPMOST;
+	// HWND HW_Now = HWND_TOPMOST;
 	bool isChanged = false;
 	if (isShow)
 	{
-
 	}
 	else
 	{
-
 	}
 
 	if (isTopMost)
@@ -73,11 +72,10 @@ void setThisTop(HWND thisHandle)
 		}
 	}
 
-	//SetWindowPos((HWND)this->winId(), HW_TopMods, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
+	// SetWindowPos((HWND)this->winId(), HW_TopMods, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
 
 	if (isChanged)
 	{
 		SetWindowPos(thisHandle, HW_TopMods, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE);
 	}
 }
-

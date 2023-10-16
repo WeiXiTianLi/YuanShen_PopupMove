@@ -2,11 +2,11 @@
 
 #include <Windows.h>
 
-//»ñÈ¡»ò¸üĞÂÔ­Éñ´°¿Ú¾ä±ú
+// è·å–æˆ–æ›´æ–°åŸç¥çª—å£å¥æŸ„
 HWND getYuanShenHandle();
 
-//»ñÈ¡Ô­Éñ´°¿ÚÎ»ÖÃºÍ´óĞ¡
+// è·å–åŸç¥çª—å£ä½ç½®å’Œå¤§å°
 bool getYuanShenRect(HWND giHandle, RECT &giRect);
 
-//ÉèÖÃ×ÔÉíÖÃ¶¥
+// è®¾ç½®è‡ªèº«ç½®é¡¶
 void setThisTop(HWND thisHandle);

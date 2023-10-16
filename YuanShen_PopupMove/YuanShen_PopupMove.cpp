@@ -7,16 +7,16 @@
 #include "YuanShen_Fun.h"
 
 YuanShen_PopupMove::YuanShen_PopupMove(QWidget *parent)
-    : QMainWindow(parent)
+	: QMainWindow(parent)
 {
-    ui.setupUi(this);
+	ui.setupUi(this);
 	this->setWindowFlags(Qt::FramelessWindowHint);
 	this->setAttribute(Qt::WA_TranslucentBackground, true);
-	//this->setAttribute(Qt::WA_TransparentForMouseEvents, true);
+	// this->setAttribute(Qt::WA_TransparentForMouseEvents, true);
 
 	connect(ui.pB_StartMove, &QPushButton::clicked, this, &YuanShen_PopupMove::StartMove);
 
-		//setCurrentIndex;
+	// setCurrentIndex;
 }
 
 void YuanShen_PopupMove::mousePressEvent(QMouseEvent *event)
@@ -67,25 +67,23 @@ void YuanShen_PopupMove::syncToYuanShen()
 	ysHandle = getYuanShenHandle();
 	if (IsWindow(ysHandle))
 	{
-		SetForegroundWindow(ysHandle);/* 对原神窗口的操作 */
+		SetForegroundWindow(ysHandle); /* 瀵瑰師绁炵獥鍙ｇ殑鎿嶄綔 */
 		if (getYuanShenRect(ysHandle, ysRect))
 		{
 			this->setGeometry(ysRect.left, ysRect.top, ysRect.right - ysRect.left, ysRect.bottom - ysRect.top);
-			
+
 			this->resize(ysRect.right - ysRect.left, ysRect.bottom - ysRect.top);
-			//ui.label->setGeometry(ysRect.left, ysRect.top, ysRect.right - ysRect.left, ysRect.bottom - ysRect.top);
+			// ui.label->setGeometry(ysRect.left, ysRect.top, ysRect.right - ysRect.left, ysRect.bottom - ysRect.top);
 			setThisTop((HWND)this->winId());
-
 		}
-
 	}
 }
 void YuanShen_PopupMove::syncToThis()
 {
 	if (IsWindow(ysHandle))
 	{
-		bool res=false;
-		res=SetWindowPos(ysHandle, HWND_TOPMOST, this->x(), this->y(), 0, 0, SWP_NOZORDER | SWP_NOSIZE);
+		bool res = false;
+		res = SetWindowPos(ysHandle, HWND_TOPMOST, this->x(), this->y(), 0, 0, SWP_NOZORDER | SWP_NOSIZE);
 
 		if (!res)
 		{
@@ -95,7 +93,7 @@ void YuanShen_PopupMove::syncToThis()
 			{
 			case 5:
 			{
-				//need admin
+				// need admin
 				break;
 			}
 			}
@@ -106,4 +104,3 @@ void YuanShen_PopupMove::StartMove()
 {
 	ui.stackedWidget->setCurrentIndex(1);
 }
-
