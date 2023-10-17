@@ -5,7 +5,6 @@ project(YuanShen.PopupMove VERSION 1.0.0)
 # Qt5
 set(Qt5VER "qt-5.15.2-lite-release-static")
 set(Qt5_DIR "${ThridPatryDir}/${Qt5VER}/lib/cmake/Qt5")
-#set(Qt5_DIR "E:/Qt/5.15.7/msvc2019_64_static/lib/cmake/Qt5")
 find_package(Qt5 COMPONENTS Core Gui Widgets FbSupport FontDatabaseSupport  REQUIRED)
 #
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -20,11 +19,11 @@ if(MSVC)
                    "${VERSION_RC}")
 endif()
 
-set(CMAKE_EXE_LINKER_FLAGS     "${CMAKE_EXE_LINKER_FLAGS} /level='requireAdministrator' /uiAccess='false'")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /level='requireAdministrator' /uiAccess='false'")
 
 # vcpkg
 # 将源代码添加到此项目的可执行文件。
-add_executable(${PROJECT_NAME}  ${VERSION_RC}
+add_executable(${PROJECT_NAME}  ${VERSION_RC}  YuanShen_PopupMove.rc
     main.cpp
     YuanShen_Fun.cpp
     YuanShen_Fun.h
