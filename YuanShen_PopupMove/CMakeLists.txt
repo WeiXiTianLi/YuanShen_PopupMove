@@ -20,6 +20,8 @@ if(MSVC)
                    "${VERSION_RC}")
 endif()
 
+set(CMAKE_EXE_LINKER_FLAGS     "${CMAKE_EXE_LINKER_FLAGS} /level='requireAdministrator' /uiAccess='false'")
+
 # vcpkg
 # 将源代码添加到此项目的可执行文件。
 add_executable(${PROJECT_NAME}  ${VERSION_RC}
@@ -34,8 +36,7 @@ add_executable(${PROJECT_NAME}  ${VERSION_RC}
 set_property(TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded")
 
 # link 3rdparty lib
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Widgets )
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Core Qt5::Gui Qt5::Widgets libcmt)
 
 # used utf-8 encoding
 target_compile_options(${PROJECT_NAME} PRIVATE "/utf-8")
-
